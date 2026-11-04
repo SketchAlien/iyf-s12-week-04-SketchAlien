@@ -30,8 +30,6 @@ console.log(`Today is: ${today.toDateString()}`);
 // Task 7.2 Data Types
 // Exercise 1: Number Operations
 
-console.log("--- Exercise 1: Number Operations ---");
-
 let a = 10;
 let b = 3;
 
@@ -164,7 +162,7 @@ function reverseString(str) {
 
 console.log("Reverse 'hello':", reverseString("hello"));
 
-// Build calculateTip
+// CalculateTip
 
 function calculateTip(bill, tipPercent = 15) {
 
@@ -325,9 +323,7 @@ for (let i = 1; i <= 5; i++) {
 
 console.log(starTriangle);
 
-
 // Mini-Project: Calculator
-
 
 function calcAdd(a, b) {
 
@@ -398,19 +394,12 @@ function calculate(num1, operator, num2) {
 // Tests
 
 console.log("10 + 5 =", calculate(10, "+", 5));
-
 console.log("10 - 5 =", calculate(10, "-", 5));
-
 console.log("10 * 5 =", calculate(10, "*", 5));
-
 console.log("10 / 5 =", calculate(10, "/", 5));
-
 console.log("10 / 0 =", calculate(10, "/", 0));
-
 console.log("10 % 3 =", calculate(10, "%", 3));
-
 console.log("2 ** 3 =", calculate(2, "**", 3));
-
 
 // Lesson 8, Task 8.1: Arrays
 
@@ -432,19 +421,15 @@ console.log("Number of fruits:", fruits.length);
 
 // Modifying arrays
 
-fruits.push("grape");        // Add to end
-
-fruits.unshift("mango");     // Add to start
-
+fruits.push("grape");       
+fruits.unshift("mango");   
 console.log("Updated fruits:", fruits);
-
-fruits.pop();                // Remove from end
-
-fruits.shift();              // Remove from start
+fruits.pop();              
+fruits.shift();              
 
 console.log("Fruits after removing first and last:", fruits);
 
-console.log("--- Task 8.1: Array Methods ---");
+//Task 8.1: Array Methods
 
 // forEach - do something with each element
 
@@ -510,11 +495,9 @@ const product = [2, 3, 4].reduce((total, num) => total * num, 1);
 
 console.log("4. Product of 2, 3, 4:", product);
 
-// Task 8.2: Objects
-
 //Task 8.2: Object Basics
 
-// Creating an object (using your own details!)
+// Creating an object 
 
 const myProfile = {
 
@@ -522,41 +505,35 @@ const myProfile = {
 
     lastName: "Alien",
 
-    age: 22, // Use your age
+    age: 39, 
 
     isStudent: true,
 
     hobbies: ["drawing", "coding", "gaming"],
 
     address: {
-
-        city: "Nairobi", // Or your city
-
-        country: "Kenya" // Or your country
-
+        city: "Nairobi",
+        country: "Kenya"
     }
-
 };
 
 // Accessing properties
 
 console.log("First name:", myProfile.firstName);       // Dot notation
-
 console.log("Last name:", myProfile["lastName"]);      // Bracket notation
-
 console.log("City:", myProfile.address.city);          // Nested object
 
 // Modifying properties
 
-myProfile.age = 23; // Change age
+myProfile.age = 39; // Change age
 
-myProfile.phone = "0712 345 678"; // Add new property
+myProfile.phone = "0746 22 55 32"; 
 
-delete myProfile.isStudent; // Remove property
+delete myProfile.isStudent;
 
 console.log("Updated profile:", myProfile);
 
-console.log("--- Task 8.2: Object Methods ---");
+//Task 8.2: Object Methods
 
 const mathCalc = {
 
@@ -581,21 +558,15 @@ const mathCalc = {
 };
 
 console.log("Object Add (5+3):", mathCalc.add(5, 3));
-
 console.log("Object Subtract (10-4):", mathCalc.subtract(10, 4));
-
 console.log("Object Multiply (6*6):", mathCalc.multiply(6, 6));
-
 console.log("--- Task 8.2: Object Iteration ---");
 
 const scores = {
 
     math: 95,
-
     english: 88,
-
     science: 92
-
 };
 
 // Get keys
@@ -623,18 +594,12 @@ for (const [subject, score] of Object.entries(scores)) {
 
 // Task 8.3: Array of Objects
 
-console.log("--- Task 8.3: Working with Real Data ---");
-
 const studentList = [
 
     { name: "Alice", age: 22, grade: 85, major: "CS" },
-
     { name: "Bob", age: 20, grade: 72, major: "Math" },
-
     { name: "Charlie", age: 23, grade: 90, major: "CS" },
-
     { name: "Diana", age: 21, grade: 88, major: "Physics" },
-
     { name: "Eve", age: 22, grade: 95, major: "CS" }
 
 ];
@@ -687,27 +652,27 @@ const allPassing = studentList.every(student => student.grade >= 60);
 
 console.log("8. Are all students passing?", allPassing);
 
+
 // Task 8.4: JSON — Data as Text
 
 console.log("--- Task 8.4: JSON ---");
 
 const jsonText = '{"name":"Wanjiku","grades":{"math":88,"english":92}}';
 
+
 // 1. Text -> object (Parsing)
 
 const parsedStudent = JSON.parse(jsonText);
 
-console.log("Parsed Math Grade:", parsedStudent.grades.math); // 88
+console.log("Parsed Math Grade:", parsedStudent.grades.math); 
+
 
 // 2. Object -> text (Stringifying)
 
 const backToText = JSON.stringify(parsedStudent, null, 2);
 
 console.log("Stringified Object:\n", backToText);
-
 console.log("Type of backToText:", typeof backToText); // string
-
-
 console.log("--- Task 8.4 Exercise: Posts ---");
 
 const postsJson = '[{"id":1,"title":"Welcome","likes":12,"published":true},{"id":2,"title":"Draft ideas","likes":0,"published":false},{"id":3,"title":"Week 4 recap","likes":30,"published":true}]';
@@ -736,39 +701,26 @@ const finalJson = JSON.stringify(sortedPosts, null, 2);
 
 console.log("Final JSON String:\n", finalJson);
 
-// ==========================================
 
 // Mini-Project: Student Grade Tracker
-
-// ==========================================
-
-console.log("--- Mini-Project: Grade Tracker ---");
 
 const gradeTracker = {
 
     students: [],
-
-   
 
     // 1. Add a new student
 
     addStudent(name, grades) {
 
         this.students.push({ name: name, grades: grades });
-
     },
-
-   
 
     // 2. Get a student by name
 
     getStudent(name) {
 
         return this.students.find(student => student.name === name) || null;
-
     },
-
-   
 
     // 3. Calculate a student's average
 
@@ -778,7 +730,6 @@ const gradeTracker = {
 
         if (!student) return "Student not found";
 
-       
 
         const gradesArray = Object.values(student.grades);
 
@@ -788,8 +739,6 @@ const gradeTracker = {
 
     },
 
-   
-
     // 4. Get class average for a subject
 
     getSubjectAverage(subject) {
@@ -797,8 +746,6 @@ const gradeTracker = {
         let total = 0;
 
         let count = 0;
-
-       
 
         for (const student of this.students) {
 
@@ -826,13 +773,8 @@ const gradeTracker = {
 
         if (this.students.length === 0) return null;
 
-       
-
         let topStudent = this.students[0];
-
         let highestAvg = parseFloat(this.getStudentAverage(topStudent.name));
-
-       
 
         for (const student of this.students) {
 
@@ -843,7 +785,6 @@ const gradeTracker = {
                 highestAvg = avg;
 
                 topStudent = student;
-
             }
 
         }
@@ -851,8 +792,6 @@ const gradeTracker = {
         return topStudent;
 
     },
-
-   
 
     // 6. Get students needing help (average < 70)
 
@@ -868,25 +807,17 @@ const gradeTracker = {
 
     },
 
-   
-
     // 7. Get letter grade
 
     getLetterGrade(score) {
 
         if (score >= 90) return "A";
-
         if (score >= 80) return "B";
-
         if (score >= 70) return "C";
-
         if (score >= 60) return "D";
-
         return "F";
 
     },
-
-   
 
     // 8. Generate report card
 
@@ -895,8 +826,6 @@ const gradeTracker = {
         const student = this.getStudent(name);
 
         if (!student) return "Student not found";
-
-       
 
         let report = `--- Report Card for ${student.name} ---\n`;
 
@@ -916,20 +845,109 @@ const gradeTracker = {
 
 // Test your implementation
 
-// Note: The README uses "Alice", "Bob", "Charlie" - I've changed them here so you don't get penalized for template text!
-
 gradeTracker.addStudent("SketchAlien", { math: 95, english: 88, science: 92 });
-
 gradeTracker.addStudent("Wanjiku", { math: 72, english: 85, science: 78 });
-
 gradeTracker.addStudent("Brian", { math: 60, english: 65, science: 58 });
 
 console.log("SketchAlien's Average:", gradeTracker.getStudentAverage("SketchAlien")); // 91.67
-
 console.log("Math Subject Average:", gradeTracker.getSubjectAverage("math")); // 75.67
-
 console.log("Top Student:", gradeTracker.getTopStudent());
-
 console.log("Struggling Students:", gradeTracker.getStrugglingStudents());
-
 console.log(gradeTracker.generateReportCard("SketchAlien"));
+
+// Daily Challenges
+
+// Day 1: FizzBuzz
+
+function dailyFizzBuzz() {
+
+    for (let i = 1; i <= 100; i++) {
+
+        if (i % 3 === 0 && i % 5 === 0) {
+
+            console.log("FizzBuzz");
+
+        } else if (i % 3 === 0) {
+
+            console.log("Fizz");
+
+        } else if (i % 5 === 0) {
+
+            console.log("Buzz");
+
+        } else {
+
+            console.log(i);
+
+        }
+
+    }
+
+}
+
+
+console.log("FizzBuzz function is ready (uncomment to run).");
+
+// Day 2: Reverse a String
+
+function reverseText(str) {
+
+    return str.split("").reverse().join("");
+
+}
+
+console.log("Reverse 'hello':", reverseText("hello"));
+
+//Day 3: Find Largest Number
+
+function findLargest(arr) {
+
+    let largest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+
+        if (arr[i] > largest) {
+
+            largest = arr[i];
+
+        }
+
+    }
+
+    return largest;
+
+}
+
+console.log("Largest in [10, 5, 25, 8]:", findLargest([10, 5, 25, 8]));
+
+const findLargestReduce = (arr) => arr.reduce((max, current) => current > max ? current : max, arr[0]);
+
+console.log("Largest using reduce:", findLargestReduce([10, 5, 25, 8]));
+
+//Day 4: Remove Duplicates 
+
+function removeDuplicates(arr) {
+
+    return [...new Set(arr)];
+
+}
+
+console.log("No duplicates:", removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+//Day 5: Palindrome Checker
+
+function isPalindrome(str) {
+
+    // Remove spaces and make lowercase
+
+    const cleanStr = str.toLowerCase().replace(/\s/g, "");
+
+    // Compare with its reverse
+
+    return cleanStr === cleanStr.split("").reverse().join("");
+
+}
+
+console.log("Is 'racecar' a palindrome?", isPalindrome("racecar")); // true
+console.log("Is 'hello' a palindrome?", isPalindrome("hello")); // false
+console.log("Is 'A man a plan a canal Panama' a palindrome?", isPalindrome("A man a plan a canal Panama")); // true
