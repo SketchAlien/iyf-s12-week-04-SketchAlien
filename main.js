@@ -174,3 +174,153 @@ function calculateTip(bill, tipPercent = 15) {
 
 console.log("Tip on 100 (default 15%):", calculateTip(100));
 console.log("Tip on 200 (20%):", calculateTip(200, 20));
+
+
+// Task 7.4: Control Flow
+
+//Exercise 1: If/Else Statements
+
+function getGrade(score) {
+
+    if (score >= 90) {
+
+        return "A";
+
+    } else if (score >= 80) {
+
+        return "B";
+
+    } else if (score >= 70) {
+
+        return "C";
+
+    } else if (score >= 60) {
+
+        return "D";
+
+    } else {
+
+        return "F";
+
+    }
+
+}
+
+console.log("Grade for 85:", getGrade(85));
+console.log("Grade for 55:", getGrade(55));
+
+//Exercise 2: Switch Statements
+
+function getDayName(dayNumber) {
+
+    switch (dayNumber) {
+
+        case 0:
+
+            return "Sunday";
+
+        case 1:
+
+            return "Monday";
+
+        case 2:
+
+            return "Tuesday";
+
+        case 3:
+
+            return "Wednesday";
+
+        case 4:
+
+            return "Thursday";
+
+        case 5:
+
+            return "Friday";
+
+        case 6:
+
+            return "Saturday";
+
+        default:
+
+            return "Invalid day";
+
+    }
+
+}
+
+console.log("Day 3:", getDayName(3));
+console.log("Day 9:", getDayName(9));
+
+
+//Exercise 3: Loops
+
+// 1. Print numbers 1-10 (I'm doing 1-10 instead of 1-100 to save console space!)
+
+let loopNumbers = "";
+
+for (let i = 1; i <= 10; i++) {
+
+    loopNumbers += i + " ";
+
+}
+
+console.log("Numbers 1-10:", loopNumbers);
+
+// 2. Print only even numbers 1-50
+
+let evenNumbers = "";
+
+for (let i = 1; i <= 50; i++) {
+
+    if (i % 2 === 0) {
+
+        evenNumbers += i + " ";
+
+    }
+
+}
+
+console.log("Even numbers 1-50:", evenNumbers);
+
+// 3. FizzBuzz (1-20 for testing)
+
+console.log("FizzBuzz (1-20):");
+
+for (let i = 1; i <= 20; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+
+        console.log("FizzBuzz");
+
+    } else if (i % 3 === 0) {
+
+        console.log("Fizz");
+
+    } else if (i % 5 === 0) {
+
+        console.log("Buzz");
+
+    } else {
+
+        console.log(i);
+
+    }
+
+}
+
+// 4. Triangle of stars
+
+console.log("Star Triangle:");
+
+let starTriangle = "";
+
+for (let i = 1; i <= 5; i++) {
+
+    starTriangle += "*".repeat(i) + "\n";
+
+}
+
+console.log(starTriangle);
