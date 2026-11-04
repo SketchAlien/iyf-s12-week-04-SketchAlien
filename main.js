@@ -509,3 +509,113 @@ console.log("3. First > 10:", firstOver10);
 const product = [2, 3, 4].reduce((total, num) => total * num, 1);
 
 console.log("4. Product of 2, 3, 4:", product);
+
+// Task 8.2: Objects
+
+console.log("--- Task 8.2: Object Basics ---");
+
+// Creating an object (using your own details!)
+
+const myProfile = {
+
+    firstName: "Sketch",
+
+    lastName: "Alien",
+
+    age: 22, // Use your age
+
+    isStudent: true,
+
+    hobbies: ["drawing", "coding", "gaming"],
+
+    address: {
+
+        city: "Nairobi", // Or your city
+
+        country: "Kenya" // Or your country
+
+    }
+
+};
+
+// Accessing properties
+
+console.log("First name:", myProfile.firstName);       // Dot notation
+
+console.log("Last name:", myProfile["lastName"]);      // Bracket notation
+
+console.log("City:", myProfile.address.city);          // Nested object
+
+// Modifying properties
+
+myProfile.age = 23; // Change age
+
+myProfile.phone = "0712 345 678"; // Add new property
+
+delete myProfile.isStudent; // Remove property
+
+console.log("Updated profile:", myProfile);
+
+console.log("--- Task 8.2: Object Methods ---");
+
+const mathCalc = {
+
+    add: function(a, b) {
+
+        return a + b;
+
+    },
+
+    // Shorthand method syntax
+
+    subtract(a, b) {
+
+        return a - b;
+
+    },
+
+    // Arrow function
+
+    multiply: (a, b) => a * b
+
+};
+
+console.log("Object Add (5+3):", mathCalc.add(5, 3));
+
+console.log("Object Subtract (10-4):", mathCalc.subtract(10, 4));
+
+console.log("Object Multiply (6*6):", mathCalc.multiply(6, 6));
+
+console.log("--- Task 8.2: Object Iteration ---");
+
+const scores = {
+
+    math: 95,
+
+    english: 88,
+
+    science: 92
+
+};
+
+// Get keys
+
+console.log("Keys:", Object.keys(scores));  
+
+// Get values
+
+console.log("Values:", Object.values(scores));
+
+// Get entries
+
+console.log("Entries:", Object.entries(scores));
+
+// Loop through
+
+console.log("Looping through scores:");
+
+for (const [subject, score] of Object.entries(scores)) {
+
+    console.log(`${subject}: ${score}`);
+
+}
