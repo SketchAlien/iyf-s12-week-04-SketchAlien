@@ -324,3 +324,89 @@ for (let i = 1; i <= 5; i++) {
 }
 
 console.log(starTriangle);
+
+
+// Mini-Project: Calculator
+
+
+function calcAdd(a, b) {
+
+    return a + b;
+
+}
+
+function calcSubtract(a, b) {
+
+    return a - b;
+
+}
+
+function calcMultiply(a, b) {
+
+    return a * b;
+
+}
+
+function calcDivide(a, b) {
+
+    if (b === 0) {
+
+        return "Error: Cannot divide by zero";
+
+    }
+
+    return a / b;
+
+}
+
+function calculate(num1, operator, num2) {
+
+    switch (operator) {
+
+        case "+":
+
+            return calcAdd(num1, num2);
+
+        case "-":
+
+            return calcSubtract(num1, num2);
+
+        case "*":
+
+            return calcMultiply(num1, num2);
+
+        case "/":
+
+            return calcDivide(num1, num2);
+
+        case "%":
+
+            return num1 % num2;
+
+        case "**":
+
+            return num1 ** num2;
+
+        default:
+
+            return "Invalid operator";
+
+    }
+
+}
+
+// Tests
+
+console.log("10 + 5 =", calculate(10, "+", 5));
+
+console.log("10 - 5 =", calculate(10, "-", 5));
+
+console.log("10 * 5 =", calculate(10, "*", 5));
+
+console.log("10 / 5 =", calculate(10, "/", 5));
+
+console.log("10 / 0 =", calculate(10, "/", 0));
+
+console.log("10 % 3 =", calculate(10, "%", 3));
+
+console.log("2 ** 3 =", calculate(2, "**", 3));
