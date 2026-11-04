@@ -410,3 +410,102 @@ console.log("10 / 0 =", calculate(10, "/", 0));
 console.log("10 % 3 =", calculate(10, "%", 3));
 
 console.log("2 ** 3 =", calculate(2, "**", 3));
+
+
+// Lesson 8, Task 8.1: Arrays
+
+console.log("--- Task 8.1: Array Basics ---");
+
+// Creating arrays
+
+const fruits = ["apple", "banana", "orange"];
+
+const numbers = [1, 2, 3, 4, 5];
+
+const mixed = ["hello", 42, true, null];
+
+// Accessing elements
+
+console.log("First fruit:", fruits[0]);
+
+console.log("Number of fruits:", fruits.length);
+
+// Modifying arrays
+
+fruits.push("grape");        // Add to end
+
+fruits.unshift("mango");     // Add to start
+
+console.log("Updated fruits:", fruits);
+
+fruits.pop();                // Remove from end
+
+fruits.shift();              // Remove from start
+
+console.log("Fruits after removing first and last:", fruits);
+
+console.log("--- Task 8.1: Array Methods ---");
+
+// forEach - do something with each element
+
+console.log("Doubled numbers (forEach):");
+
+numbers.forEach(num => console.log(num * 2));
+
+// map - transform each element
+
+const doubled = numbers.map(num => num * 2);
+
+console.log("Mapped doubled array:", doubled);
+
+// filter - keep elements that pass a test
+
+const filteredNumbers = numbers.filter(num => num % 2 === 0);
+
+console.log("Filtered even numbers:", evenNumbers);
+
+// find - get first element that passes test
+
+const firstEven = numbers.find(num => num % 2 === 0);
+
+console.log("First even number found:", firstEven);
+
+// reduce - combine all elements
+
+const sum = numbers.reduce((total, num) => total + num, 0);
+
+console.log("Sum of numbers (reduce):", sum);
+
+// includes - check if element exists
+
+console.log("Does it include 3?", numbers.includes(3));
+
+console.log("--- Task 8.1: Build (Array Methods) ---");
+
+// 1. Double all numbers
+
+const doubledNumbers = numbers.map(num => num * 2);
+
+console.log("1. Doubled:", doubledNumbers);
+
+// 2. Filter out negative numbers
+
+const mixedNumbers = [5, -2, 8, -10, 0];
+
+const positiveNumbers = mixedNumbers.filter(num => num >= 0);
+
+console.log("2. No negatives:", positiveNumbers);
+
+// 3. Find first number > 10
+
+const numbersOver10 = [2, 5, 12, 18, 4];
+
+const firstOver10 = numbersOver10.find(num => num > 10);
+
+console.log("3. First > 10:", firstOver10);
+
+// 4. Calculate product of all numbers
+
+const product = [2, 3, 4].reduce((total, num) => total * num, 1);
+
+console.log("4. Product of 2, 3, 4:", product);
