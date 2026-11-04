@@ -512,7 +512,7 @@ console.log("4. Product of 2, 3, 4:", product);
 
 // Task 8.2: Objects
 
-console.log("--- Task 8.2: Object Basics ---");
+//Task 8.2: Object Basics
 
 // Creating an object (using your own details!)
 
@@ -619,3 +619,70 @@ for (const [subject, score] of Object.entries(scores)) {
     console.log(`${subject}: ${score}`);
 
 }
+
+
+// Task 8.3: Array of Objects
+
+console.log("--- Task 8.3: Working with Real Data ---");
+
+const studentList = [
+
+    { name: "Alice", age: 22, grade: 85, major: "CS" },
+
+    { name: "Bob", age: 20, grade: 72, major: "Math" },
+
+    { name: "Charlie", age: 23, grade: 90, major: "CS" },
+
+    { name: "Diana", age: 21, grade: 88, major: "Physics" },
+
+    { name: "Eve", age: 22, grade: 95, major: "CS" }
+
+];
+
+// 1. Get all student names
+
+const studentNames = studentList.map(student => student.name);
+
+console.log("1. Names:", studentNames);
+
+// 2. Get students with grade > 80
+
+const highAchievers = studentList.filter(student => student.grade > 80);
+
+console.log("2. High Achievers:", highAchievers);
+
+// 3. Find the student named "Charlie"
+
+const charlie = studentList.find(student => student.name === "Charlie");
+
+console.log("3. Found Charlie:", charlie);
+
+// 4. Calculate average grade
+
+const avgGrade = studentList.reduce((total, student) => total + student.grade, 0) / studentList.length;
+
+console.log("4. Average Grade:", avgGrade);
+
+// 5. Get CS majors only
+
+const csMajors = studentList.filter(student => student.major === "CS");
+
+console.log("5. CS Majors:", csMajors);
+
+// 6. Sort by grade (highest first) - We use [...studentList] to avoid mutating the original array
+
+const sortedByGrade = [...studentList].sort((a, b) => b.grade - a.grade);
+
+console.log("6. Sorted by Grade:", sortedByGrade);
+
+// 7. Check if any student has grade > 90
+
+const hasTopStudent = studentList.some(student => student.grade > 90);
+
+console.log("7. Has a top student (>90)?", hasTopStudent);
+
+// 8. Check if all students are passing (grade >= 60)
+
+const allPassing = studentList.every(student => student.grade >= 60);
+
+console.log("8. Are all students passing?", allPassing);
