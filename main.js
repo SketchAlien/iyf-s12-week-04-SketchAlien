@@ -401,9 +401,9 @@ console.log("10 / 0 =", calculate(10, "/", 0));
 console.log("10 % 3 =", calculate(10, "%", 3));
 console.log("2 ** 3 =", calculate(2, "**", 3));
 
-// Lesson 8, Task 8.1: Arrays
+// Lesson 8
 
-console.log("--- Task 8.1: Array Basics ---");
+//Task 8.1: Array Basics
 
 // Creating arrays
 
@@ -429,7 +429,7 @@ fruits.shift();
 
 console.log("Fruits after removing first and last:", fruits);
 
-//Task 8.1: Array Methods
+//Task 8.2: Array Methods
 
 // forEach - do something with each element
 
@@ -519,9 +519,9 @@ const myProfile = {
 
 // Accessing properties
 
-console.log("First name:", myProfile.firstName);       // Dot notation
-console.log("Last name:", myProfile["lastName"]);      // Bracket notation
-console.log("City:", myProfile.address.city);          // Nested object
+console.log("First name:", myProfile.firstName);       
+console.log("Last name:", myProfile["lastName"]);      
+console.log("City:", myProfile.address.city);          
 
 // Modifying properties
 
@@ -533,7 +533,8 @@ delete myProfile.isStudent;
 
 console.log("Updated profile:", myProfile);
 
-//Task 8.2: Object Methods
+//Exercise 2: Object Methods
+
 
 const mathCalc = {
 
@@ -560,13 +561,17 @@ const mathCalc = {
 console.log("Object Add (5+3):", mathCalc.add(5, 3));
 console.log("Object Subtract (10-4):", mathCalc.subtract(10, 4));
 console.log("Object Multiply (6*6):", mathCalc.multiply(6, 6));
-console.log("--- Task 8.2: Object Iteration ---");
+
+// Exercise 3: Object Iteration
 
 const scores = {
 
     math: 95,
+
     english: 88,
+
     science: 92
+
 };
 
 // Get keys
@@ -654,8 +659,6 @@ console.log("8. Are all students passing?", allPassing);
 
 
 // Task 8.4: JSON — Data as Text
-
-console.log("--- Task 8.4: JSON ---");
 
 const jsonText = '{"name":"Wanjiku","grades":{"math":88,"english":92}}';
 
